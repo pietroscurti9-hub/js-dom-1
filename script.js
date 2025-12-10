@@ -25,6 +25,7 @@ button.addEventListener("click", () => {
     //  il testo del bottone in "Spegni" e cambia il valore in true 
     if (isOn === false) {
         img.src = "./img/yellow_lamp.png"
+        button.style = "box-shadow: 5px 0px 10px 5px rgb(0, 0, 0, 0.25)";
         button.innerText = "Spegni"
         isOn = true
         console.log("accesa");
@@ -34,6 +35,7 @@ button.addEventListener("click", () => {
         // socrascrivi il testo "Accendi" nel bottone  e cambia il valore in false
     } else {
         img.src = "./img/white_lamp.png"
+        button.style = "box-shadow: 5px 0px 10px 5px rgb(0, 0, 0, 0)";
         button.innerText = "Accendi"
         isOn = false
         console.log("spenta");

@@ -9,11 +9,19 @@
 .interruttore {
     padding: 10px 30px;
     border-radius: 30px;
+    width: 130px;
     color: white;
+    /* box-shadow: 5px 0px 10px 5px rgb(0, 0, 0, 0.25); */
     background-color: orangered;
     filter: brightness(0.7); 
     /* inserisco un filtro standard per avere la modifica 
     prima di passare il mouse sull'interruttore */
+}
+    
+
+.interruttore:active {
+    transform: scale(1.1);
+    
 }
 
 
