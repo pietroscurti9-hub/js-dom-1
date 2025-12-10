@@ -13,35 +13,35 @@ const img = document.querySelector(".lampadina")
 let isOn = false
 
 button.addEventListener("click", () => {
-    
-    
+
+
     if (isOn === false) {
         img.src = "./img/yellow_lamp.png"
         isOn = true
         console.log("accesa");
     } else {
-        isOn = false
         img.src = "./img/white_lamp.png"
+        isOn = false
         console.log("spenta");
-        
+
     }
-
-    
-        
-
-
-
-    
-}
+ }
 )
-    
-// const whiteLamp = img.src = "./img/white_lamp.png"
-    
-   
 
 
 
-    
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
