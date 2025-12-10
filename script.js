@@ -7,7 +7,7 @@
 // in allegato)
 
 
-const button = document.getElementById("interruttore")
+const button = document.querySelector(".interruttore")
 const img = document.querySelector(".lampadina")
 
 let isOn = false
@@ -17,16 +17,46 @@ button.addEventListener("click", () => {
 
     if (isOn === false) {
         img.src = "./img/yellow_lamp.png"
+        button.innerText = "Spegni"
+
         isOn = true
+
         console.log("accesa");
     } else {
         img.src = "./img/white_lamp.png"
+        button.innerText = "Accendi"
         isOn = false
         console.log("spenta");
 
     }
- }
-)
+}
+);
+
+button.addEventListener("mouseenter", () => {
+
+    if (isOn === false) {
+        button.style.filter = "brightness(1)";
+    } else {
+        button.style.filter = "brightness(0.7)";
+    }
+
+
+    button.addEventListener("mouseleave", () => {
+
+        if (isOn === true) {
+            button.style.filter = "brightness(1)";
+        } else {
+            button.style.filter = "brightness(0.7)";
+        }
+    }
+    )
+
+
+    console.log("Mouse sopra il bottone");
+
+}
+);
+
 
 
 
