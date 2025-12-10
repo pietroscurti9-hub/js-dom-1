@@ -7,22 +7,31 @@
 // in allegato)
 
 
+// richiamo le classi degli elementi in html attribuendo loro una variabile
 const button = document.querySelector(".interruttore")
 const img = document.querySelector(".lampadina")
 
+
+// creo una variabile standard per poter tenere traccia e  
+// modificare il comportamento dell'elemento
 let isOn = false
 
+
+//  quando clicco il bottone
 button.addEventListener("click", () => {
-// se la lampadina è spenta, quando clicco cambia la sorgente dell'immagine, 
-// il valore in true e il testo del bottone in "Spegni"
+
+    // se la lampadina è spenta [isOn === false], 
+    // sovrascrivi la sorgente dell'immagine, 
+    //  il testo del bottone in "Spegni" e cambia il valore in true 
     if (isOn === false) {
         img.src = "./img/yellow_lamp.png"
         button.innerText = "Spegni"
         isOn = true
         console.log("accesa");
 
-// altrimenti se la lampadina è accesa, quando clicco rimetti la sorgente dell'immagine precedente, 
-// il valore in false e rimetti il testo "Accendi" nel bottone
+        // altrimenti se la lampadina è accesa [isOn === true], quando clicco il bottone, 
+        // rimetti la sorgente dell'immagine precedente, 
+        // socrascrivi il testo "Accendi" nel bottone  e cambia il valore in false
     } else {
         img.src = "./img/white_lamp.png"
         button.innerText = "Accendi"
@@ -34,8 +43,8 @@ button.addEventListener("click", () => {
 );
 // quando ho il puntatore sull'elemento button
 button.addEventListener("mouseenter", () => {
-// se la lampadina è spenta [isOn === false], modifica lo stile aumentando la luminosità
-// altrimenti diminiuscila
+    // se la lampadina è spenta, modifica lo stile dell'elemento aumentando la luminosità
+    // altrimenti diminiuscila
     if (isOn === false) {
         button.style.filter = "brightness(1)";
     } else {
@@ -44,20 +53,20 @@ button.addEventListener("mouseenter", () => {
 
 
     button.addEventListener("mouseleave", () => {
-// se la lampadina è accesa [isOn === true], modifica lo stile diminuendo la luminosità
-// altrimenti aumentala
+        // se la lampadina è accesa, modifica lo stile dell'elemento diminuendo la luminosità
+        // altrimenti aumentala
         if (isOn === true) {
             button.style.filter = "brightness(1)";
         } else {
             button.style.filter = "brightness(0.7)";
         }
     }
-  )
- }
+   )
+  }
 );
 
 
-    
+
 
 
 

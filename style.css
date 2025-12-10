@@ -11,7 +11,9 @@
     border-radius: 30px;
     color: white;
     background-color: orangered;
-    filter: brightness(0.7);
+    filter: brightness(0.7); 
+    /* inserisco un filtro standard per avere la modifica 
+    prima di passare il mouse sull'interruttore */
 }
 
 
