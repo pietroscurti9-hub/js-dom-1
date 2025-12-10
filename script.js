@@ -7,13 +7,13 @@
 // in allegato)
 
 
-// richiamo le classi degli elementi in html attribuendo loro una variabile
+// richiamo le classi degli elementi in html attribuendo loro in una variabile
 const button = document.querySelector(".interruttore")
 const img = document.querySelector(".lampadina")
 
 
-// creo una variabile standard per poter tenere traccia e  
-// modificare il comportamento dell'elemento
+// creo una variabile standard con valore booleano per tenere traccia e  
+// modificare i valori delle classi
 let isOn = false
 
 
@@ -39,9 +39,9 @@ button.addEventListener("click", () => {
         console.log("spenta");
 
     }
-  }
+}
 );
-// quando ho il puntatore sull'elemento button
+// quando ho il puntatore sulla costante button
 button.addEventListener("mouseenter", () => {
     // se la lampadina è spenta, modifica lo stile dell'elemento aumentando la luminosità
     // altrimenti diminiuscila
@@ -51,7 +51,7 @@ button.addEventListener("mouseenter", () => {
         button.style.filter = "brightness(0.7)";
     }
 
-
+    // quando tolgo il puntatore dalla costante button
     button.addEventListener("mouseleave", () => {
         // se la lampadina è accesa, modifica lo stile dell'elemento diminuendo la luminosità
         // altrimenti aumentala
@@ -61,8 +61,8 @@ button.addEventListener("mouseenter", () => {
             button.style.filter = "brightness(0.7)";
         }
     }
-   )
-  }
+    )
+}
 );
 
 
